@@ -1,0 +1,162 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	line-height: 1.5;
+	font-size: 18px;
+}
+
+.logo a {
+	text-decoration: none;
+	color: white;
+}
+
+img {
+	width: 100%;
+	padding: 0 5rem;
+}
+
+.header--bg,
+.hero--bg {
+	background-color: #085fd8;
+	color: white;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.header {
+	/* display: flex;
+	align-content: center;
+	justify-content: space-between; */
+}
+
+.nav__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	/* display: flex;
+	align-items: center; */
+}
+
+.nav__item {
+	margin: 0 2rem;
+}
+
+.btn--donate {
+	border: 2px solid white;
+	border-radius: 3px;
+	padding: 0.5em 1.5em;
+}
+
+.btn--donate:hover {
+	cursor: pointer;
+	background-color: white;
+	color: #085fd8;
+	transition: all 0.5s;
+}
+
+.hero {
+	height: 60vh;
+	min-height: 500px;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+.col {
+	width: 100%;
+}
+
+.hero__title {
+	font-size: 2.5rem;
+}
+.hero__body {
+	max-width: 500px;
+}
+
+.cards__list {
+	margin-top: 8rem;
+	margin-bottom: 4rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.card {
+	height: 200px;
+	border: 1.5px solid rgb(210, 214, 219);
+	border-radius: 3px;
+	padding: 2rem;
+	position: relative;
+	box-shadow: 0px 2px 0px rgb(210, 214, 219);
+}
+
+.card::after {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 0;
+	height: 100%;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #085fd8;
+	transition: width 0.2s ease-in-out;
+}
+
+.card:hover::after {
+	width: 100%;
+}
+
+.card:hover {
+	cursor: pointer;
+	color: white;
+	border: none;
+	box-shadow: 0px 2px 0px #083575;
+}
+
+.card__title {
+	font-family: syncopate;
+}
+
+.card__cta {
+	text-decoration: none;
+	color: inherit;
+	font-size: 1rem;
+	position: relative;
+}
+
+.disclaimer {
+	font-size: 12px;
+	max-width: 500px;
+	line-height: 1.5;
+}
+
+.footer-bg {
+	background-color: #085fd8;
+	color: white;
+	padding: 3rem;
+}
+
+@media (min-width: 600px) {
+	.cards__list {
+		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	}
+}
