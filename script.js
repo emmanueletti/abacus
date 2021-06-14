@@ -1,4 +1,4 @@
-import { calc0 } from './components/calc-components.js';
+import { calc0 } from './components/calc-html.js';
 
 const calculatorCards = document.querySelectorAll('.card');
 
@@ -18,3 +18,6 @@ calculatorCards.forEach((card, index) => {
 		mainBodyContainer.innerHTML = eval(calculatorFunction);
 	});
 });
+
+// calculation
+let currentAmount = document.get;
