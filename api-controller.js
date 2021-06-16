@@ -1,5 +1,5 @@
 // @desc calculate investment returns with and without fees
-// @route POST /api/investment-fees
+// @route POST /api/investment-returns
 const calculateInvestmentReturns = (req, res) => {
 	// get x-www-form-urlencoded form data found in body and concated data chunks into variable
 	let body = '';
@@ -40,3 +40,5 @@ const calculateInvestmentReturns = (req, res) => {
 module.exports = {
 	calculateInvestmentReturns,
 };
+
+// test
