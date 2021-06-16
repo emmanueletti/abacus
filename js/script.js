@@ -1,4 +1,4 @@
-import { calc0 } from './components/calc-html.js';
+import { calc0 } from './components/calculators.js';
 
 const calculatorCards = document.querySelectorAll('.card');
 
@@ -19,5 +19,6 @@ calculatorCards.forEach((card, index) => {
 	});
 });
 
-// calculation
-let currentAmount = document.get;
+// get calculator results from API
+
+// investment returns calculation
