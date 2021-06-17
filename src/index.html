@@ -51,15 +51,15 @@
 
 				<div class="calc result">
 					<div class="fees-result">
-						<h1 class="result__title" id="totalWithoutFees">200k</h1>
+						<h1 class="result__title" id="totalWithoutFees">-</h1>
 						<p class="result__text">TOTAL AT RETIRMENT</p>
 					</div>
 					<div class="fees-result left-border right-border">
-						<h1 class="result__title" id="amountOfFees">100k</h1>
+						<h1 class="result__title" id="amountOfFees">-</h1>
 						<p class="result__text">LOST IN FEES</p>
 					</div>
 					<div class="fees-result">
-						<h1 class="result__title" id="percentToKeep">50%</h1>
+						<h1 class="result__title" id="percentToKeep">-</h1>
 						<p class="result__text">LEFT TO KEEP</p>
 					</div>
 				</div>
@@ -68,32 +68,37 @@
 					<div class="calc col">
 						<h3>Current Situation</h3>
 						<label for="current-amount">How much do you have invested?</label>
-						<input class="" type="number" name="current-amount" id="current-amount" placeholder="5000" />
+						<input class="" type="number" name="current-amount" id="current-amount" value="5000" />
 						<label for="contribution-amount">How much do you contribute yearly?</label>
-						<input class="" type="number" name="contribution-amount" id="contribution-amount" placeholder="1000" />
+						<input class="" type="number" name="contribution-amount" id="contribution-amount" value="1000" />
 						<label for="current-age">How old are you?</label>
-						<input class="" type="number" id="current-age" name="current-age" placeholder="18" min="18" max="100" />
+						<input class="" type="number" id="current-age" name="current-age" value="18" min="18" max="100" />
 						<p class="input-tip">(Input number between 18 and 100)</p>
 					</div>
 					<div class="calc col">
 						<h3>Retirement</h3>
 						<label for="end-age">What age do you hope to retire?</label>
-						<input class="" type="number" id="end-age" name="end-age" placeholder="65" min="18" max="100" />
+						<input class="" type="number" id="end-age" name="end-age" value="65" min="18" max="100" />
 						<p class="input-tip">(Input number between 18 and 100)</p>
 						<h3>Investment Detail</h3>
+						<label for="annual-return">What <span>Annual Return</span> do you anticipate? </label>
+						<input class="" type="number" id="annual-return" name="annual-return" min="0" max="10" step="0.1" value="7" /><span> %</span>
+						<p class="input-tip">(Input number between 0 and 10)</p>
+
 						<label for="mer">What is your <span>Management Expense Ratio (M.E.R)?</span></label>
-						<input class="" type="number" id="mer" name="mer" min="0" max="5" step="0.1" placeholder="2.23" /><span> %</span>
-						<p class="input-tip">(Input number between 0 and 5)</p>
+						<input class="input-enlarged" type="number" id="mer" name="mer" min="0" max="10" step="0.1" value="2.23" /><span> %</span>
+						<p class="input-tip">(Input number between 0 and 10)</p>
 					</div>
 				</div>
+				<div class="calculator-btn" id="calulate-investment-fees">Calculate</div>
 				<h3>Assumptions</h3>
-				<ul>
-					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga.</li>
-					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, est?</li>
+				<ol>
+					<li>Annual contributions are added at the end of year</li>
+					<li>The average Canadian has a MER of 2.23%</li>
 					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dignissimos.</li>
 					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, deserunt!</li>
 					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, ab.</li>
-				</ul>
+				</ol>
 			</div>
 			<!-- END: calculator testing area -->
 

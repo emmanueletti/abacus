@@ -169,6 +169,7 @@ label {
 
 input {
 	padding: 0.5em;
+	min-width: fit-content;
 }
 
 .input-tip {
@@ -210,9 +211,24 @@ input {
 	font-weight: bold;
 }
 
-/* CALCULATOR 0 - fees*/
+.calculator-btn {
+	background-color: #083575;
+	color: white;
+	padding: 1em;
+	margin-top: 1rem;
+	width: fit-content;
+}
+
+.calculator-btn:hover {
+	background-color: white;
+	color: #083575;
+	border: #083575 1px solid;
+	cursor: pointer;
+}
+
+/* CALCULATOR 0 - investment fees*/
 .fees-result {
-	flex-grow: 1;
+	flex-basis: 100%;
 	text-align: center;
 }
 
