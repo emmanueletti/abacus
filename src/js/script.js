@@ -69,7 +69,7 @@ calculatorCards.forEach((card, index) => {
 		};
 
 		investmentFeesSubmit.addEventListener('click', () => {
-			fetch('http://localhost:5000/api/investment-returns', {
+			fetch('https://abacusio-api.herokuapp.com/', {
 				method: 'POST',
 				headers: {
 					Accept: 'application/json',
