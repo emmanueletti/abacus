@@ -8,19 +8,19 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Abacus</title>
 	</head>
 	<body>
 		<header class="header--bg">
 			<div class="header container">
-				<!-- fix this - add a proper "back" button. add event listener that resets the page when clicked AND add a back button in body that does the same thing -->
 				<h1 class="logo"><a href="/">abacus</a></h1>
 				<ul class="nav__list">
 					<li class="nav__item">Calculator API</li>
 				</ul>
 				<ul class="nav__list">
-					<li class="nav__item">About</li>
+					<li class="nav__item">Resources</li>
 					<li class="nav__item btn--donate">Donate</li>
 				</ul>
 			</div>
@@ -38,14 +38,26 @@
 			</div>
 		</section>
 
+		<section>
+			<div id="back-btn" class="back-btn hidden">
+				<i class="bi bi-arrow-left"></i>
+				<h2 class="back-btn__title">Back</h2>
+			</div>
+		</section>
+
 		<main class="main-container">
 			<!-- START: calculator testing area -->
-			<div class="container calc-0">
+			<!-- <div class="container calc-0">
+				<div id='back-btn' class="back-btn">
+					<i class="bi bi-arrow-left"></i>
+					<h2 class="back-btn__title">Back</h2>
+				</div>
 				<div class="calc header">
 					<h1 class="calc-0__title">How Much Are You Truely Paying in Fees?</h1>
 					<p class="calc-0__body">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt doloribus, quo blanditiis ut sed magni eligendi nemo inventore! Dolorum
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt doloribus, quo blanditiis ut sed magni eligendi nemo inventore!
+						One of the biggest determinants of how much you end with up when you retire is the fees you pay during your investing years. Beyond making
+						regular contributions to tax advantaged accounts like your TFSA and RRSP, the second best thing you can do for your future self is to keep
+						an eye on the management fees charged by your advisor, bank, brokerage, and/or investment fund.
 					</p>
 				</div>
 
@@ -68,11 +80,11 @@
 					<div class="calc col">
 						<h3>Current Situation</h3>
 						<label for="current-amount">How much do you have invested?</label>
-						<input class="" type="number" name="current-amount" id="current-amount" value="5000" />
+						<input class="" type="number" name="current-amount" id="current-amount" value="10000" />
 						<label for="contribution-amount">How much do you contribute yearly?</label>
-						<input class="" type="number" name="contribution-amount" id="contribution-amount" value="1000" />
+						<input class="" type="number" name="contribution-amount" id="contribution-amount" value="6000" />
 						<label for="current-age">How old are you?</label>
-						<input class="" type="number" id="current-age" name="current-age" value="18" min="18" max="100" />
+						<input class="" type="number" id="current-age" name="current-age" value="32" min="18" max="100" />
 						<p class="input-tip">(Input number between 18 and 100)</p>
 					</div>
 					<div class="calc col">
@@ -81,11 +93,11 @@
 						<input class="" type="number" id="end-age" name="end-age" value="65" min="18" max="100" />
 						<p class="input-tip">(Input number between 18 and 100)</p>
 						<h3>Investment Detail</h3>
-						<label for="annual-return">What <span>Annual Return</span> do you anticipate? </label>
-						<input class="" type="number" id="annual-return" name="annual-return" min="0" max="10" step="0.1" value="7" /><span> %</span>
+						<label for="annual-return">What annual return do you anticipate? </label>
+						<input class="" type="number" id="annual-return" name="annual-return" min="0" max="10" step="0.1" value="6" /><span> %</span>
 						<p class="input-tip">(Input number between 0 and 10)</p>
 
-						<label for="mer">What is your <span>Management Expense Ratio (M.E.R)?</span></label>
+						<label for="mer">What is your investments annual management fees? <br />(aka <span>Management Expense Ratio (M.E.R))</span></label>
 						<input class="input-enlarged" type="number" id="mer" name="mer" min="0" max="10" step="0.1" value="2.23" /><span> %</span>
 						<p class="input-tip">(Input number between 0 and 10)</p>
 					</div>
@@ -93,15 +105,36 @@
 				<div class="calculator-btn" id="calulate-investment-fees">Calculate</div>
 				<h3>Assumptions</h3>
 				<ol>
-					<li>Annual contributions are added at the end of year</li>
-					<li>The average Canadian has a MER of 2.23%</li>
-					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dignissimos.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, deserunt!</li>
-					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, ab.</li>
+					<li>Annual contributions are added at the end of year as opposed to the beginning of the year</li>
+					<li>The average Canadian pays 2.23% a year in investment fees</li>
+					<li>The average Canadian starts investing at 32</li>
+					<li>The earliest retirement age for Canadians is 65</li>
 				</ol>
-			</div>
+				<h3>Resources</h3>
+				<p class="">
+					None of these links are affiliate. Clicking them or signing up does not provide me with any commisions or rewards. Nothing to sell here.
+				</p>
+				<ol>
+					<li>
+						<a href="https://www.wealthsimple.com/en-ca/product/invest">Wealthsimple</a> is one of Canada's most cost effective robo-advisors. Great
+						For those who want to put their investments on autopilot.
+					</li>
+					<li>
+						<a href="https://www.questrade.com/home">Questrade</a> is one of Canada's most cost effective discount brokerage. Great for those who feel
+						confident enough to learn and manage a DIY portfolio.
+					</li>
+					<li>
+						<a href="https://passiv.com/">Passiv</a> is an incredible tool for Canadian DIY investors who don't want to deal with spreadsheets and
+						portfolio rebalancing calculations.
+					</li>
+					<li>
+						<a href="https://canadiancouchpotato.com/getting-started/">Canadian Couch Potato</a> is a great starting place for Canadians wanting to
+						learn about DIY passive index investing (THE best investment strategy for the average person).
+					</li>
+				</ol>
+			</div> -->
 			<!-- END: calculator testing area -->
-
+			<div id="calc-container" class="container"></div>
 			<div class="container cards__list">
 				<!-- card 0 -->
 				<div class="card row">
@@ -146,10 +179,12 @@
 		<footer class="footer-bg">
 			<div class="container">
 				<p class="disclaimer">
-					Disclaimer: The views and calculations expressed are provided as a general source of information only and should not be considered to as
-					professional advice. Please consult with a financial professional to ensure decisions are aligned with personal circumstances. The
-					information contained on this site is presented as accurate to the best of my knowledge (and mathematical abilities), however nobody's
-					perfect so please consume at your own risk. None of this constitutes professional financial advice.
+					Disclaimer: The views, calculators, and API are provided as general sources of information only and should not be considered professional
+					advice. The calculators are programmed to the best of my mathematical abilities but since nobody is perfect, please use them at your own
+					risk. The calulators are meant for illustrative purposes only and come with limitations. For example, the investment fees calculator does
+					not anticipate or take into account the effects of inflation or government taxes on the ending balance at retirement. None of the links on
+					this site are affiliate links, nor does clicking on them or signing up for thier respective services provide me with any commissions or
+					rewards.
 				</p>
 			</div>
 		</footer>

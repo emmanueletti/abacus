@@ -89,8 +89,36 @@ img {
 	max-width: 500px;
 }
 
+.back-btn {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	background-color: #083575;
+	color: white;
+	box-shadow: 0px 4px 0px rgb(210, 214, 219);
+}
+
+.back-btn:hover {
+	cursor: pointer;
+}
+
+.back-btn.hidden {
+	display: none;
+}
+
+.back-btn__title {
+	margin: 0;
+}
+
+.bi-arrow-left {
+	color: white;
+	font-size: 1.5rem;
+}
+
 .main-container {
-	margin-top: 8rem;
+	margin-top: 4rem;
 	margin-bottom: 4rem;
 }
 .cards__list {
@@ -151,7 +179,7 @@ img {
 
 .disclaimer {
 	font-size: 12px;
-	max-width: 500px;
+	/* max-width: 500px; */
 	line-height: 1.5;
 }
 
@@ -162,6 +190,7 @@ img {
 }
 
 /* CALCULATOR GENERAL */
+
 label {
 	display: block;
 	margin-top: 1rem;
@@ -230,6 +259,13 @@ input {
 .fees-result {
 	flex-basis: 100%;
 	text-align: center;
+}
+
+/* UTILITY CLASSES */
+
+.centered {
+	max-width: fit-content;
+	margin: 0 auto;
 }
 
 @media (min-width: 600px) {
